@@ -2,7 +2,7 @@
 //compute the dimensional weight of a 12" x 10" x 8" box
 int main(void)
 {
-    int height, length, width, weight, volume;
+    int height, length, width, volume;
     printf("Enter the height of box: ");
     scanf("%d", &height);
     printf("Enter the length of box: ");
@@ -12,10 +12,10 @@ int main(void)
     //calculate the volume of the box
     volume = height * length * width;
     //calculate the dimensional weight of the box
-    weight = (volume + 165) / 166;
     //print results
     printf("Dimensions: %dx%dx%d\n",length,width,height);
     printf("Volume (cubic inches): %d\n", volume);
-    printf("Dimensional weight (pounds): %d\n", weight);
+    printf("Dimensional weight (pounds): %d\n", ((volume + 165)/166));
 
+    return 0;
 }
